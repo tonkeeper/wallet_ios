@@ -68,6 +68,10 @@ extension BuyListViewController: BuyListViewInput {
   func updateSections(_ sections: [BuyListSection]) {
     collectionController.sections = sections
   }
+  
+  func showEmpty() {
+    collectionController.sections = [BuyListSection(type: .empty, items: [BuyListEmptyCell.Model()])]
+  }
 }
 
 // MARK: - Private

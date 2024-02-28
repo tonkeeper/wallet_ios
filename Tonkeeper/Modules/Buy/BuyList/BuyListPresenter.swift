@@ -8,6 +8,7 @@
 
 import Foundation
 import WalletCoreKeeper
+import FirebaseRemoteConfig
 
 final class BuyListPresenter {
   
@@ -74,12 +75,20 @@ private extension BuyListPresenter {
         }
       } catch {}
       do {
-        let loadedViewModels = try await fiatMethodsController.loadFiatMethods()
+        let loadedViewModels = try await fiatMethodsController.loadFiatMethods(isMarketRegionPickerAvailable: FirebaseConfigurator.configurator.isMarketRegionPickerAvailable)
         await MainActor.run {
-          viewInput?.updateSections(loadedViewModels.map {
-            let cellModels = $0.map { buyListServiceBuilder.buildServiceModel(viewModel: $0) }
-            return BuyListSection(type: .services, items: cellModels)
-          })
+          if loadedViewModels.isEmpty {
+            viewInput?.showEmpty()
+          } else {
+            viewInput?.updateSections(loadedViewModels.map {
+              let cellModels = $0.map { buyListServiceBuilder.buildServiceModel(viewModel: $0) }
+              return BuyListSection(type: .services, items: cellModels)
+            })
+          }
+        }
+      } catch {
+        await MainActor.run {
+          viewInput?.showEmpty()
         }
       }
     }

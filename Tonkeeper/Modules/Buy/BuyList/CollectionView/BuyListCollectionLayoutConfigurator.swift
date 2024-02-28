@@ -26,6 +26,8 @@ private extension BuyListCollectionLayoutConfigurator {
       return createServicesSection()
     case .button:
       return createButtonSection()
+    case .empty:
+      return createEmptySection()
     }
   }
   
@@ -49,6 +51,26 @@ private extension BuyListCollectionLayoutConfigurator {
                                                  subitems: [item])
     let section = NSCollectionLayoutSection(group: group)
     section.contentInsets = .buttonSectionContentInsets
+    return section
+  }
+  
+  func createEmptySection() -> NSCollectionLayoutSection {
+    let item = NSCollectionLayoutItem(
+      layoutSize: NSCollectionLayoutSize(
+        widthDimension: .fractionalWidth(1.0),
+        heightDimension: .absolute(100)
+      )
+    )
+    let group = NSCollectionLayoutGroup.horizontal(
+      layoutSize: NSCollectionLayoutSize(
+        widthDimension: .fractionalWidth(1.0),
+        heightDimension: .absolute(
+          100
+        )
+      ),
+      subitems: [item]
+    )
+    let section = NSCollectionLayoutSection(group: group)
     return section
   }
 }

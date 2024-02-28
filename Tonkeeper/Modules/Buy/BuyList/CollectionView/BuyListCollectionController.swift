@@ -38,6 +38,10 @@ final class BuyListCollectionController: NSObject {
     collectionView.setCollectionViewLayout(layout, animated: false)
     collectionView.register(BuyListServiceCell.self,
                              forCellWithReuseIdentifier: BuyListServiceCell.reuseIdentifier)
+    collectionView.register(
+      BuyListEmptyCell.self,
+      forCellWithReuseIdentifier: BuyListEmptyCell.reuseIdentifier
+    )
     dataSource = createDataSource(collectionView: collectionView)
   }
 }
@@ -60,6 +64,8 @@ private extension BuyListCollectionController {
         return self.getServiceCell(collectionView: collectionView,
                                    indexPath: indexPath,
                                    model: model)
+      case let model as BuyListEmptyCell.Model:
+        return self.getEmptyCell(collectionView: collectionView, indexPath: indexPath)
       default:
         return UICollectionViewCell()
       }
@@ -82,6 +88,10 @@ private extension BuyListCollectionController {
     cell.isInGroup = sections[indexPath.section].items.count > 1
     cell.delegate = self
     return cell
+  }
+  
+  func getEmptyCell(collectionView: UICollectionView, indexPath: IndexPath) -> UICollectionViewCell {
+    return collectionView.dequeueReusableCell(withReuseIdentifier: BuyListEmptyCell.reuseIdentifier, for: indexPath)
   }
   
   func getButtonCell(collectionView: UICollectionView,

@@ -25,4 +25,5 @@ protocol BuyListPresenterInput {
 
 protocol BuyListViewInput: AnyObject {
   func updateSections(_ sections: [BuyListSection])
+  func showEmpty()
 }

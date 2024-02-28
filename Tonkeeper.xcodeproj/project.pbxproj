@@ -414,6 +414,10 @@
 		C33B7A542B4BBE3E00BE7E60 /* BackupCheckAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33B7A4D2B4BBE3E00BE7E60 /* BackupCheckAssembly.swift */; };
 		C33B7A582B4BC91B00BE7E60 /* SettingsBackupDateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33B7A572B4BC91B00BE7E60 /* SettingsBackupDateView.swift */; };
 		C33F72462AF27E3E00E61F72 /* TonConnectHeaderWalletAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33F72452AF27E3E00E61F72 /* TonConnectHeaderWalletAnimationView.swift */; };
+		C353E8A92B8E22F1003C5013 /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C353E8A82B8E22F1003C5013 /* FirebaseRemoteConfigSwift */; };
+		C353E8AB2B8E2375003C5013 /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = C353E8AA2B8E2375003C5013 /* FirebaseRemoteConfig */; };
+		C353E8AD2B8F464F003C5013 /* FirebaseConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353E8AC2B8F464F003C5013 /* FirebaseConfigurator.swift */; };
+		C353E8B32B8F600F003C5013 /* BuyListEmptyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C353E8B22B8F600F003C5013 /* BuyListEmptyCell.swift */; };
 		C35684112AEBFD810064DD0A /* AuthEventsDaemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35684102AEBFD810064DD0A /* AuthEventsDaemon.swift */; };
 		C35684152AEC37CA0064DD0A /* TonConnectConfirmationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35684142AEC37CA0064DD0A /* TonConnectConfirmationCoordinator.swift */; };
 		C35684172AEC397A0064DD0A /* TonConnectConfirmationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = C35684162AEC397A0064DD0A /* TonConnectConfirmationProtocols.swift */; };
@@ -966,6 +970,8 @@
 		C33B7A4D2B4BBE3E00BE7E60 /* BackupCheckAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BackupCheckAssembly.swift; sourceTree = "<group>"; };
 		C33B7A572B4BC91B00BE7E60 /* SettingsBackupDateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsBackupDateView.swift; sourceTree = "<group>"; };
 		C33F72452AF27E3E00E61F72 /* TonConnectHeaderWalletAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonConnectHeaderWalletAnimationView.swift; sourceTree = "<group>"; };
+		C353E8AC2B8F464F003C5013 /* FirebaseConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseConfigurator.swift; sourceTree = "<group>"; };
+		C353E8B22B8F600F003C5013 /* BuyListEmptyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyListEmptyCell.swift; sourceTree = "<group>"; };
 		C35684102AEBFD810064DD0A /* AuthEventsDaemon.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = AuthEventsDaemon.swift; sourceTree = "<group>"; tabWidth = 2; };
 		C35684142AEC37CA0064DD0A /* TonConnectConfirmationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonConnectConfirmationCoordinator.swift; sourceTree = "<group>"; };
 		C35684162AEC397A0064DD0A /* TonConnectConfirmationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonConnectConfirmationProtocols.swift; sourceTree = "<group>"; };
@@ -1047,6 +1053,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C353E8AB2B8E2375003C5013 /* FirebaseRemoteConfig in Frameworks */,
 				C35E6C3B2ADFC9F400F8B524 /* TKChart in Frameworks */,
 				7D5A18122A5406CB00793769 /* Kingfisher in Frameworks */,
 				7DB17F352A4B2F07007C6154 /* AnyFormatKit in Frameworks */,
@@ -1054,6 +1061,7 @@
 				C35E6C3E2ADFC9F800F8B524 /* TKCore in Frameworks */,
 				C3388B182B3C690A000FE225 /* WalletCore in Frameworks */,
 				C302974D2B4ED93A00DD6FFC /* FirebaseCrashlytics in Frameworks */,
+				C353E8A92B8E22F1003C5013 /* FirebaseRemoteConfigSwift in Frameworks */,
 				C35E6C382ADFC9F100F8B524 /* TKUIKit in Frameworks */,
 				C302974B2B4ED93A00DD6FFC /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 			);
@@ -1566,6 +1574,7 @@
 			isa = PBXGroup;
 			children = (
 				7D3E438E2A339E2A00C23A75 /* BuyListServiceCell.swift */,
+				C353E8B22B8F600F003C5013 /* BuyListEmptyCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -2658,6 +2667,7 @@
 			children = (
 				7DB8FB652A1BCC92005B4B11 /* AppDelegate.swift */,
 				7DB8FB672A1BCC92005B4B11 /* SceneDelegate.swift */,
+				C353E8AC2B8F464F003C5013 /* FirebaseConfigurator.swift */,
 				7D3BCFAD2A4C5DB900BE6AD9 /* Assemblies */,
 				7D70D3BE2A2A03280096E1A2 /* Logic */,
 				C3774F0A2B35AF4700B15B78 /* Flows */,
@@ -3157,6 +3167,8 @@
 				C3388B172B3C690A000FE225 /* WalletCore */,
 				C302974A2B4ED93A00DD6FFC /* FirebaseAnalyticsWithoutAdIdSupport */,
 				C302974C2B4ED93A00DD6FFC /* FirebaseCrashlytics */,
+				C353E8A82B8E22F1003C5013 /* FirebaseRemoteConfigSwift */,
+				C353E8AA2B8E2375003C5013 /* FirebaseRemoteConfig */,
 			);
 			productName = Tonkeeper;
 			productReference = 7DB8FB622A1BCC92005B4B11 /* Tonkeeper.app */;
@@ -3370,6 +3382,7 @@
 				7D5D05D52A309674009F42FF /* ContainerCollectionViewCell.swift in Sources */,
 				7D9144372A33403000B0FD17 /* ActivityTransactionDetailsBuilder.swift in Sources */,
 				7D0207622A7FE42A00D63B4C /* ActivityListCompositionTransactionCell.swift in Sources */,
+				C353E8B32B8F600F003C5013 /* BuyListEmptyCell.swift in Sources */,
 				7D4C14662AD99152002B2922 /* SettingsListFooterView.swift in Sources */,
 				7D3D65192ACAD1D000E64537 /* SettingsListItemCollectionViewCell.swift in Sources */,
 				7DE27E622A30CDEE00842FA8 /* TransactionType.swift in Sources */,
@@ -3699,6 +3712,7 @@
 				7D1163042A603B6A00DF4F30 /* TokenDetailsAssembly.swift in Sources */,
 				DB9A1AA91502A6E162CD3BC3 /* BuyListView.swift in Sources */,
 				7D3BCFC02A4C9E6B00BE6AD9 /* RootAssembly.swift in Sources */,
+				C353E8AD2B8F464F003C5013 /* FirebaseConfigurator.swift in Sources */,
 				7DC8A3B72A7C172B00B8B219 /* ActivityListViewController+TokenDetailsListContentViewController.swift in Sources */,
 				097A038C8793EF67158AD194 /* BuyListPresenter.swift in Sources */,
 				C38957812AF13FD70083B98A /* ModalCardViewController+ContentView.swift in Sources */,
@@ -3998,13 +4012,14 @@
 				CODE_SIGN_ENTITLEMENTS = Configurations/Entitlements/Tonkeeper.entitlements;
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = "$(BUILD_NUMBER)";
+				CURRENT_PROJECT_VERSION = 47;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tonkeeper/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tonkeeper X Debug";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Tonkeeper uses camera to scan QR codes";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Tonkeeper uses biometric authentication to authorize transactions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -4015,7 +4030,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(APP_VERSION)";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "$(PROVISIONING_PROFILE_SPECIFIER)";
@@ -4038,13 +4053,14 @@
 				CODE_SIGN_ENTITLEMENTS = Configurations/Entitlements/Tonkeeper.entitlements;
 				CODE_SIGN_IDENTITY = "$(CODE_SIGN_IDENTITY)";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = "$(BUILD_NUMBER)";
+				CURRENT_PROJECT_VERSION = 47;
 				DEVELOPMENT_TEAM = "$(DEVELOPMENT_TEAM)";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = CT523DK2KC;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Tonkeeper/Resources/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "$(BUNDLE_DISPLAY_NAME)";
+				INFOPLIST_KEY_CFBundleDisplayName = "Tonkeeper X Debug";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Tonkeeper uses camera to scan QR codes";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Tonkeeper uses biometric authentication to authorize transactions";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -4055,7 +4071,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = "$(APP_VERSION)";
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "$(PRODUCT_BUNDLE_IDENTIFIER)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "$(PROVISIONING_PROFILE_SPECIFIER)";
@@ -4261,6 +4277,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = C311FC842B3C68B700BE9022 /* XCRemoteSwiftPackageReference "core-swift" */;
 			productName = WalletCore;
+		};
+		C353E8A82B8E22F1003C5013 /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30297492B4ED93A00DD6FFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		C353E8AA2B8E2375003C5013 /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C30297492B4ED93A00DD6FFC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
 		};
 		C35E6C372ADFC9F100F8B524 /* TKUIKit */ = {
 			isa = XCSwiftPackageProductDependency;

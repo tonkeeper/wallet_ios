@@ -11,6 +11,7 @@ struct BuyListSection: Hashable {
   enum SectionType {
     case services
     case button
+    case empty
   }
   
   let id = UUID()

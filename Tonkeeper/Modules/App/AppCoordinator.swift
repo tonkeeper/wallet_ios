@@ -31,7 +31,7 @@ final class AppCoordinator: Coordinator<WindowRouter> {
     Task {
       try await appAssembly.walletCoreAssembly.knownAccounts.loadAccounts()
       _ = await appAssembly.walletCoreAssembly.configurationController.loadConfiguration()
-      _ = try await appAssembly.walletCoreAssembly.fiatMethodsController().loadFiatMethods()
+      _ = try await appAssembly.walletCoreAssembly.fiatMethodsController().loadFiatMethods(isMarketRegionPickerAvailable: false)
     }
   }
 
